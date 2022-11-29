@@ -1,0 +1,53 @@
+[
+  {
+    "docs": {
+      "exportName": "default",
+      "displayName": "HelloWorld",
+      "description": "",
+      "tags": {},
+      "props": [
+        {
+          "name": "msg",
+          "description": "The message to display",
+          "required": true,
+          "type": {
+            "name": "string"
+          }
+        }
+      ],
+      "events": [
+        {
+          "name": "change",
+          "type": {
+            "names": [
+              "number"
+            ]
+          },
+          "description": "On change do something",
+          "properties": [
+            {
+              "type": {
+                "names": [
+                  "number"
+                ]
+              },
+              "name": "id",
+              "description": "The id of the user"
+            }
+          ],
+          "tags": [
+            {
+              "title": "arg",
+              "type": {
+                "name": "number"
+              },
+              "name": "id",
+              "description": "The id of the user"
+            }
+          ]
+        }
+      ]
+    },
+    "name": "HelloWorld"
+  }
+]

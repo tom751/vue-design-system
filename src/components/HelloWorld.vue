@@ -1,6 +1,17 @@
 <script setup lang="ts">
 defineProps<{
+  /**
+   * The message to display
+   */
   msg: string
+}>()
+
+defineEmits<{
+  /**
+   * On change do something
+   * @arg {number} id - The id of the user
+   */
+  (e: 'change', id: number): void
 }>()
 </script>
 
