@@ -10,9 +10,10 @@ app.use(router)
 
 const components = import.meta.glob('./components/**/*.vue')
 
-Object.keys(components).forEach((key: string) => {
+Object.keys(components).forEach(async (key: string) => {
   const componentName = key.split('/').pop()?.split('.')[0] || 'Some component'
-  app.component(componentName, components[key])
+  const a = await components[key]()
+  app.component(componentName, a.default)
 })
 
 app.mount('#app')

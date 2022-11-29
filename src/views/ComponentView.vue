@@ -40,6 +40,11 @@
         </td>
       </tr>
     </table>
+
+    <div v-if="$route.params.name">
+      <h2>Preview</h2>
+      <component :is="$route.params.name" />
+    </div>
   </div>
 </template>
 
