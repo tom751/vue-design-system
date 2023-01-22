@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "serve": "run-p dev watch",
-    "dev": "vite",
+    "dev": "run-p serve watch",
+    "serve": "vite",
     "watch": "ts-node-dev --respawn --watch ./src/components/**/*.vue --project tsconfig.scripts.json ./scripts/watch.ts",
     "build": "run-p type-check build-only",
     "preview": "vite preview",
@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "vue": "^3.2.45",
+    "vue-live": "^2.3.2",
     "vue-router": "^4.1.6"
   },
   "devDependencies": {

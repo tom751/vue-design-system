@@ -41,17 +41,23 @@
       </tr>
     </table>
 
-    <div v-if="$route.params.name">
+    <div v-if="component?.docs">
       <h2>Preview</h2>
-      <component :is="$route.params.name" />
+      <VueLive :editorProps="{ lineNumbers: true }" :code="docs" :layout="CustomLayout" />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+import { VueLive } from 'vue-live'
 import { useRoute } from 'vue-router'
 import components from '../components.json'
-const route = useRoute()
+import CustomLayout from '../components/CustomLayout.vue'
+import 'prismjs/themes/prism-tomorrow.css'
+import 'vue-live/style.css'
 
+const route = useRoute()
 const component = components.find((c) => c.name === route.params.name)
+const docs = component.docs.docsBlocks[0].replace(/```/g, '').replace(/jsx/, '')
+console.log(docs)
 </script>

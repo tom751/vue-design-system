@@ -1,8 +1,27 @@
 [
   {
     "docs": {
+      "displayName": "CustomLayout",
+      "description": "",
+      "tags": {},
+      "slots": [
+        {
+          "name": "editor"
+        },
+        {
+          "name": "preview"
+        }
+      ]
+    },
+    "name": "CustomLayout"
+  },
+  {
+    "docs": {
       "exportName": "default",
       "displayName": "HelloWorld",
+      "docsBlocks": [
+        "```jsx\n\n<div>\n  <HelloWorld msg=\"alright\" />\n  <HelloWorld msg=\"howdy\" />\n</div>\n\n\n```"
+      ],
       "description": "",
       "tags": {},
       "props": [

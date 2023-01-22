@@ -10,7 +10,6 @@
 </template>
 
 <script setup lang="ts">
-import { parse } from 'vue-docgen-api'
 import { ref } from 'vue'
 
 const components = import.meta.glob('../components/**/*.vue')
@@ -21,3 +20,19 @@ const fileNames = Object.keys(components)
 
 const componentNames = ref(fileNames)
 </script>
+
+<style scoped>
+ol {
+  list-style: none;
+  padding: 0;
+  background: grey;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+</style>
